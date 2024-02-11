@@ -1,6 +1,6 @@
 package deuscringe.shvv.fintech_shakhvorostov
 
-import android.content.pm.ActivityInfo
+
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -27,10 +27,9 @@ class MainActivity : AppCompatActivity(), BlankFragment.FragmentCallbackError,Bl
         override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)
 
-            val currentActivity = this
 
-            currentActivity.requestedOrientation =
-                ActivityInfo.SCREEN_ORIENTATION_NOSENSOR
+
+
 
 
 
@@ -85,15 +84,27 @@ class MainActivity : AppCompatActivity(), BlankFragment.FragmentCallbackError,Bl
     }
 
     private fun showProgressBar(progressBar: ProgressBar,errorMessage: ConstraintLayout, check: Boolean?) {
-        errorMessage.visibility = View.GONE
-        if (!check!!)
-        progressBar.visibility = View.VISIBLE
+        try {
+            errorMessage.visibility = View.GONE
+            if (!check!!)
+                progressBar.visibility = View.VISIBLE
+        }
+        catch (e: Exception){
+
+        }
+
     }
 
     private fun hideProgressBar(progressBar: ProgressBar, errorMessage: ConstraintLayout, check: Boolean?) {
-        progressBar.visibility = View.GONE
-        if (!check!!)
-        errorMessage.visibility = View.VISIBLE
+        try {
+            progressBar.visibility = View.GONE
+            if (!check!!)
+                errorMessage.visibility = View.VISIBLE
+        }
+        catch (e: Exception){
+
+        }
+
     }
 
 }

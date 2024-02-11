@@ -17,14 +17,7 @@ import deuscringe.shvv.fintech_shakhvorostov.HTTPReq
 import deuscringe.shvv.fintech_shakhvorostov.R
 import deuscringe.shvv.fintech_shakhvorostov.VolleyCallback
 import deuscringe.shvv.fintech_shakhvorostov.databinding.FilmItemBinding
-import org.json.JSONArray
-import org.json.JSONObject
-import java.io.BufferedReader
-import java.io.FileOutputStream
-import java.io.IOException
-import java.io.InputStreamReader
-import java.io.PrintWriter
-const val FILE_NAME = "jsonArrayMyData.json"
+
 
 class FilmAdapter : ListAdapter <FilmModel, FilmAdapter.Holder> (Holder.Comporator()) {
 
@@ -85,7 +78,7 @@ class FilmAdapter : ListAdapter <FilmModel, FilmAdapter.Holder> (Holder.Comporat
 
                         override fun onError(result: String?) {
                             Log.e("MyLog", "Volley error, ID is: $id")
-                            Toast.makeText(context, "Что-то пошло не так... попробуйте обновить страницу", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "Что-то пошло не так... проверьте подключение к интернету", Toast.LENGTH_SHORT).show()
 
                         }
 
