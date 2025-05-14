@@ -142,7 +142,7 @@ class BlankFragment : Fragment() {
                 HTTPReq.getRequest(
                     "top?TOP_100_POPULAR_FILMS",
                     "",
-                    object : VolleyCallback {
+                     object : VolleyCallback {
                         override fun onSuccess(result: String) {
                             val decodedResult =
                                 String(result.toByteArray(Charsets.ISO_8859_1), Charsets.UTF_8)
