@@ -3,6 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph.xml"
-    >
+    app:startDestination="@id/popular_list_fragment">
 
+
+    <fragment
+        android:id="@+id/popular_list_fragment"
+        android:name="deuscringe.shvv.fintech_shakhvorostov.ui.view.PopularListFragment"
+        android:label="PopularListFragment"
+        tools:layout="@layout/fragment_popular_list"
+        >
+        <action
+            android:id="@+id/action_to_popular_list_detailed_fragment"
+            app:destination="@id/popular_list_detailed_fragment" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/popular_list_detailed_fragment"
+        android:name="deuscringe.shvv.fintech_shakhvorostov.ui.view.PopularListDetailedFragment"
+        android:label="PopularListDetailedFragment"
+        tools:layout="@layout/fragment_popular_list_detailed">
+        <argument
+            android:name="filmId"
+            app:argType="integer"
+            app:nullable="false" />
+
+    </fragment>
 </navigation>

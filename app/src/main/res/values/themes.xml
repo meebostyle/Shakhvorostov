@@ -5,5 +5,8 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.Fintech_Shakhvorostov" parent="Base.Theme.Fintech_Shakhvorostov" />
+    <style name="Theme.Fintech_Shakhvorostov" parent="Base.Theme.Fintech_Shakhvorostov">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
 </resources>
